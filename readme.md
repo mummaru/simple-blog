@@ -1,11 +1,6 @@
-#Simple blog project
+# How to setup
 
-## target
-- init project
-- create 'simple blog' / 'simple ui'
-- RESTful
-- use route resource
-- use event/listener
-
-## ref.
-https://medium.com/yii2-learning/%E0%B8%A1%E0%B8%B2%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-lemp-stack-%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%86-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-docker-%E0%B8%81%E0%B8%B1%E0%B8%99-part2-6692c9c33c5f
+* Setting `.env ` with your database configuration
+* Run `php artisan migrate` in your terminal
+* Run `php artisan serve` to serve with address `http://localhost:8000/`
+* Open in your browser with address `http://localhost:8000/`

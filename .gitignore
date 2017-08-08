@@ -1,12 +1,12 @@
-src/vendor/
-src/node_modules/
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
 npm-debug.log
-
-# Laravel 5 & Lumen specific
-src/public/storage
-src/public/hot
-src/storage/*.key
-src/.env
-
-# tmp file
-mysql/data/
+yarn-error.log
+.env
