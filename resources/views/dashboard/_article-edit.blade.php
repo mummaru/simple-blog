@@ -27,30 +27,30 @@
 @include('layout._form-usercontrol')
 <script type="text/javascript">
 	$('button#btndelete').on('click', function (event) {
-		event.preventDefault();
+		event.preventDefault()
 		var id = $('form').find('input[name=id]')[0],
 			token = $('form').find('input[name=_token]')[0],
 			action = $('form').attr('action'),
-			redirect = $('form').attr('redirect');
-		id = $(id).val();
-		token = $(token).val();
+			redirect = $('form').attr('redirect')
+		id = $(id).val()
+		token = $(token).val()
 		$.ajax({
 			type:'post',
 			url: '/api/dashboard/article/delete',
 			data: {'_method': 'delete', 'id': id, '_token': token},
 			beforeSend: function () {
-				var confirm = window.confirm('Yakin ingin di hapus?');
+				var confirm = window.confirm('confirm?')
 				if (!confirm) {
-					return false;
+					return false
 				}
 			},
 			success: function (res) {
 				var data = res;
 				if (typeof(res) != 'object') {
-					data = JSON.parse(res);
+					data = JSON.parse(res)
 				}
 				if (data.status == 'success'){
-					window.location.href = redirect;
+					window.location.href = redirect
 				}
 			}
 		})

@@ -24,14 +24,14 @@ class User extends Model implements AuthenticatableContract
 		'created_at',
 		'updated_at'
 	];
-	
+
 	public function getAuthPassword()
 	{
 		return $this->password;
 	}
 
 	// Make relationship to Posts table
-	public function posts ()
+	public function posts()
 	{
 		return $this->hasMany('App\Post', 'author_id', 'id');
 	}

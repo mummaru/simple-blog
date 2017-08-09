@@ -9,7 +9,9 @@
 kamu sudah login
 @endif
 @include('blog.login._login')
-<center><a class="link-to" href="{{ route('register') }}">Register</a></center>
+<center><a class="link-to" href="{{ route('register') }}">
+	Register
+</a></center>
 @endSection
 
 @push('scripts')

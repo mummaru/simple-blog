@@ -3,7 +3,7 @@
 /**
  * Register API
  */
-Route::group(['prefix' => 'register', 'middleware' => 'guest'], function () {
+Route::group(['prefix' => 'register', 'middleware' => 'guest'], function() {
 	// Post register page
 	Route::post('/', [
 		'uses'	=> 'API\UserController@postRegister',
@@ -13,7 +13,7 @@ Route::group(['prefix' => 'register', 'middleware' => 'guest'], function () {
 /**
  * Login API
  */
-Route::group(['prefix' => 'login', 'middleware' => 'guest'], function () {
+Route::group(['prefix' => 'login', 'middleware' => 'guest'], function() {
 	// Post Login page
 	Route::post('/', [
 		'uses'	=> 'API\UserController@postLogin',
@@ -21,7 +21,7 @@ Route::group(['prefix' => 'login', 'middleware' => 'guest'], function () {
 	]);
 });
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 	Route::group(['prefix' => 'article'], function () {
 		// API Create Article
 		Route::post('/create', [

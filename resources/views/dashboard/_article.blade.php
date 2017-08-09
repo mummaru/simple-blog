@@ -1,6 +1,8 @@
 <ul class="navigate">
 	<li>
-		<a href="{{ route('dashboard/article/create') }}">New Article</a>
+		<a href="{{ route('dashboard/article/create') }}">
+			New Article
+		</a>
 	</li>
 </ul>
 
@@ -20,13 +22,15 @@
 				<td>{!! str_limit($post->content, 150) !!}</td>
 				<td>{{ Carbon\Carbon::parse($post->created_at)->format('d/m/Y') }}</td>
 				<td>
-					<a href="{{ route('dashboard/article') }}/edit/{{ $post->id }}">Edit</a>
+					<a href="{{ route('dashboard/article') }}/edit/{{ $post->id }}">
+						Edit
+					</a>
 				</td>
 			</tr>
 			@endForeach
 		</tbody>
 	</table>
 	@else
-	<span>Tidak ada data</span>
+	<span>bla bla bla</span>
 	@endif
 </div>

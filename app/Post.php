@@ -13,8 +13,8 @@ class Post extends Model
 		'author_id'
 	];
 	// Make relationship to Users table
-    public function users ()
-    {
-    	return $this->belongsTo('App\User', 'author_id');
-    }
+	public function users()
+	{
+		return $this->belongsTo('App\User', 'author_id');
+	}
 }

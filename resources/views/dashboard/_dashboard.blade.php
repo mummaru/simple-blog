@@ -1,4 +1,4 @@
-<h1 class="greeting">Selamat Datang, {{ Auth::user()->username }}</h1>
+<h1 class="greeting">Hello, {{ Auth::user()->username }}</h1>
 	<table class="data">
 		<tbody>
 			<tr>
@@ -20,5 +20,7 @@
 		</tbody>
 	</table>
 
-	<a style="color:inherit;" href="{{ route('logout') }}"><button class="btn btndelete">Logout</button></a>
+	<a style="color:inherit;" href="{{ route('logout') }}">
+		<button class="btn btndelete">Logout</button>
+	</a>
 </section>

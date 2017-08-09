@@ -9,19 +9,27 @@
 	<nav>
 		<ul class="nav">
 			<li>
-				<a href="{{ route('home') }}">Home</a>
+				<a href="{{ route('home') }}">
+					Home
+				</a>
 			</li>
 			@if (!Auth::check())
 			<li>
-				<a href="{{ route('login') }}">Login</a>
+				<a href="{{ route('login') }}">
+					Login
+				</a>
 			</li>
 			<li>
-				<a href="{{ route('register') }}">Register</a>
+				<a href="{{ route('register') }}">
+					Register
+				</a>
 			</li>
 			@endif
 			@if (Auth::check())
 			<li>
-				<a href="{{ route('dashboard') }}">Dashboard</a>
+				<a href="{{ route('dashboard') }}">
+					Dashboard
+				</a>
 			</li>
 			@endif
 		</ul>

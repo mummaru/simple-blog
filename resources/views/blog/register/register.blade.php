@@ -6,7 +6,9 @@
 
 @section('content')
 @include('blog.register._register')
-<center><a class="link-to" href="{{ route('login') }}">Login</a></center>
+<center><a class="link-to" href="{{ route('login') }}">
+	Login
+</a></center>
 @endSection
 
 @push('scripts')

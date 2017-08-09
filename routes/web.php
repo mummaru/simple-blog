@@ -19,7 +19,7 @@ Route::get('/view/{id}', [
 /**
  * Login Page
  */
-Route::group(['prefix' => 'login', 'middleware' => 'guest'], function () {
+Route::group(['prefix' => 'login', 'middleware' => 'guest'], function() {
 	// Get login page
 	Route::get('/', [
 		'uses'	=> 'UserController@getLogin',
@@ -30,7 +30,7 @@ Route::group(['prefix' => 'login', 'middleware' => 'guest'], function () {
 /**
  * Register page
  */
-Route::group(['prefix' => 'register', 'middleware' => 'guest'], function () {
+Route::group(['prefix' => 'register', 'middleware' => 'guest'], function() {
 	// Get register page
 	Route::get('/', [
 		'uses'	=> 'UserController@getRegister',
@@ -40,14 +40,14 @@ Route::group(['prefix' => 'register', 'middleware' => 'guest'], function () {
 /**
  * Dashboard
  */
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function() {
 	// Dashboard index
 	Route::get('/', [
 		'uses'	=> 'DashboardController@index',
 		'as'	=> 'dashboard'
 	]);
 	// Dashboard article
-	Route::group(['prefix' => 'article'], function () {
+	Route::group(['prefix' => 'article'], function() {
 		// Get article list
 		Route::get('/', [
 			'uses'	=> 'DashboardController@article',
@@ -68,7 +68,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
 /**
  * Logout
  */
-Route::get('/logout', function () {
+Route::get('/logout', function() {
 	if (Auth::check()) {
 		Auth::logout();
 
